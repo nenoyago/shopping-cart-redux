@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #e5e7e9;
+  border-radius: 4px;
+
+  padding: 48px;
+  min-width: 140px;
+  min-height: 140px;
+
+  position: relative;
+
+  transition: border 0.2s ease-in-out;
+
+  &:hover {
+    border-style: solid;
+    border-color: #d7dbdd;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    h2 {
+      margin: 0;
+      color: #484d63;
+    }
+
+    > span {
+      color: #239b56;
+    }
+
+    button {
+      border: 0;
+      border-radius: 2px;
+      padding: 10px;
+      width: 80%;
+      color: #fff;
+      background-color: #ff8c42;
+      cursor: pointer;
+
+      text-transform: uppercase;
+
+      transition: filter 0.2s;
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.9);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        background-color: #fcaf58;
+      }
+    }
+  }
+
+  .failed-stock {
+    position: absolute;
+    bottom: 10px;
+    color: #cb4335;
+
+    font-size: 14px;
+  }
+}
